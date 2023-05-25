@@ -13,12 +13,6 @@ import org.koin.core.component.inject
 class HomeViewModel : BaseViewModel() {
     private val movieRepo: MovieRepo by inject()
 
-    fun loadPubMovies() {
-        viewModelScope.launchWithErrorHandling {
-            movieRepo.loadPopularMovies(1)
-        }
-    }
-
     fun observePubMovies() = Pager(
         PagingConfig(
             pageSize = 20,

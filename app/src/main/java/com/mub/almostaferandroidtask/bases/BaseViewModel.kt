@@ -8,7 +8,9 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.koin.core.component.KoinComponent
-
+/*
+* error logic meant to be used but was replaced with paging library loading
+* */
 abstract class BaseViewModel : ViewModel(), KoinComponent {
     private val mErrorLiveData: SingleLiveEvent<ErrorModel> = SingleLiveEvent()
     val errorLiveData: LiveData<ErrorModel>

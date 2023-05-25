@@ -2,11 +2,13 @@ package com.mub.almostaferandroidtask.features.home.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.mub.almostaferandroidtask.databinding.CellMovieBinding
 import com.mub.almostaferandroidtask.features.home.models.Movie
+import com.mub.almostaferandroidtask.features.home.view.HomeFragmentDirections
 
 
 class HomeAdapter : PagingDataAdapter<Movie, HomeAdapter.MainViewHolder>(DIFF_CALLBACK) {
@@ -25,6 +27,14 @@ class HomeAdapter : PagingDataAdapter<Movie, HomeAdapter.MainViewHolder>(DIFF_CA
         RecyclerView.ViewHolder(binding.root) {
         fun bindData(movie: Movie) {
             binding.movie = movie
+            binding.imageView.setOnClickListener { binding.root.callOnClick() }
+            binding.root.setOnClickListener {
+                binding.root.findNavController().navigate(
+                    HomeFragmentDirections.actionHomeFragmentToMovieDetailFragment(
+                        movie.id ?: 0
+                    )
+                )
+            }
         }
     }
 

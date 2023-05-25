@@ -20,7 +20,6 @@ class MovieDataSource(
                 it.voteAverage,
                 it.posterPath,
                 sortedBy,
-                it.id
             )
         }?.forEach {
             try {
@@ -35,6 +34,10 @@ class MovieDataSource(
             }
         }
     }
-   
+
+    suspend fun getMovieById(movieId: Int): Movie? {
+        return movieLocalSource.getMovieById(movieId)
+    }
+
 
 }

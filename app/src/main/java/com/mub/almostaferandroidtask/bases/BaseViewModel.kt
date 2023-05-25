@@ -28,4 +28,5 @@ abstract class BaseViewModel : ViewModel(), KoinComponent {
 
     }
 
+
 }

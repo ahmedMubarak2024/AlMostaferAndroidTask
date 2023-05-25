@@ -1,5 +1,6 @@
 package com.mub.almostaferandroidtask.di
 
+import com.mub.almostaferandroidtask.database.MovieDatabase
 import com.mub.almostaferandroidtask.features.home.datasource.MovieDataSource
 import com.mub.almostaferandroidtask.features.home.datasource.MovieOnlineSource
 import com.mub.almostaferandroidtask.features.home.repo.MovieRepo
@@ -16,14 +17,18 @@ val networkModule = module {
 }
 
 val dataSourceModule = module {
-    single { MovieDataSource(get()) }
+    single { MovieDataSource(get(), get()) }
 }
 val repoModule = module {
-    single { MovieRepo(get()) }
+    factory { MovieRepo(get()) }
 }
 
 val viewModels = module {
     viewModel { HomeViewModel() }
 }
+val databaseModel = module {
+    single { MovieDatabase.getInstance(get()) }
+    single { get<MovieDatabase>().movieDao() }
+}
 
-val models = networkModule + dataSourceModule + repoModule + viewModels
+val models = networkModule + dataSourceModule + repoModule + viewModels + databaseModel

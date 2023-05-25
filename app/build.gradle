@@ -62,7 +62,8 @@ dependencies {
     //Room Database
     def room_version = "2.5.1"
     implementation "androidx.room:room-runtime:$room_version"
-    annotationProcessor "androidx.room:room-compiler:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
     //jetback paging lib
     def paging_version = "3.1.1"
     implementation "androidx.paging:paging-runtime:$paging_version"

@@ -47,7 +47,8 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     //Kotlin coroutines
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+    def coroutines_version = "1.7.1"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
     // retrofit
     implementation "com.squareup.retrofit2:retrofit:2.9.0"
     // Retrofit GSON Converter
@@ -72,6 +73,15 @@ dependencies {
     // Kotlin
     implementation "androidx.navigation:navigation-fragment-ktx:$rootProject.nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$rootProject.nav_version"
+
+    //for testing flow
+    androidTestImplementation 'app.cash.turbine:turbine:0.13.0'
+    androidTestImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version"
+
+    // alternatively - without Android dependencies for tests
+    testImplementation "androidx.paging:paging-common:3.1.1"
+    androidTestImplementation "androidx.paging:paging-common:$paging_version"
 
 
 }

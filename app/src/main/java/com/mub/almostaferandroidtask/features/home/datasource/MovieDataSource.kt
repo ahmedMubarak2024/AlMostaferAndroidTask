@@ -1,6 +1,6 @@
 package com.mub.almostaferandroidtask.features.home.datasource
 
-import com.mub.almostaferandroidtask.features.home.models.Movie
+import com.mub.almostaferandroidtask.model.comman.Movie
 
 class MovieDataSource(
     private val onlineSource: MovieOnlineSource,

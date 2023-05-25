@@ -5,9 +5,9 @@ import androidx.paging.PagingConfig
 import androidx.paging.cachedIn
 import com.mub.almostaferandroidtask.bases.BaseRepo
 import com.mub.almostaferandroidtask.features.home.datasource.MovieDataSource
-import com.mub.almostaferandroidtask.features.home.models.Movie
 import com.mub.almostaferandroidtask.helpers.MainPagingSource
 import com.mub.almostaferandroidtask.model.Constants
+import com.mub.almostaferandroidtask.model.comman.Movie
 import kotlinx.coroutines.CoroutineScope
 
 class MovieRepo(private val movieDataSource: MovieDataSource) : BaseRepo() {

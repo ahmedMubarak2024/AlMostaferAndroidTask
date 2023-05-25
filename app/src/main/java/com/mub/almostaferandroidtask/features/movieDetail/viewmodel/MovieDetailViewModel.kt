@@ -1,8 +1,8 @@
 package com.mub.almostaferandroidtask.features.movieDetail.viewmodel
 
 import com.mub.almostaferandroidtask.bases.BaseViewModel
-import com.mub.almostaferandroidtask.features.home.models.Movie
 import com.mub.almostaferandroidtask.features.home.repo.MovieRepo
+import com.mub.almostaferandroidtask.model.comman.Movie
 import org.koin.core.component.inject
 
 class MovieDetailViewModel : BaseViewModel() {

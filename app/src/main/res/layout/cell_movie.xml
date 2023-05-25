@@ -7,7 +7,7 @@
 
         <variable
             name="movie"
-            type="com.mub.almostaferandroidtask.features.home.models.Movie" />
+            type="com.mub.almostaferandroidtask.model.comman.Movie" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

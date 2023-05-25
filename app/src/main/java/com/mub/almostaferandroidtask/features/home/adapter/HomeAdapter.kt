@@ -7,8 +7,8 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.mub.almostaferandroidtask.databinding.CellMovieBinding
-import com.mub.almostaferandroidtask.features.home.models.Movie
 import com.mub.almostaferandroidtask.features.home.view.HomeFragmentDirections
+import com.mub.almostaferandroidtask.model.comman.Movie
 
 
 class HomeAdapter : PagingDataAdapter<Movie, HomeAdapter.MainViewHolder>(DIFF_CALLBACK) {

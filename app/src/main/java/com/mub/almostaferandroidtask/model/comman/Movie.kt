@@ -1,4 +1,4 @@
-package com.mub.almostaferandroidtask.features.home.models
+package com.mub.almostaferandroidtask.model.comman
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

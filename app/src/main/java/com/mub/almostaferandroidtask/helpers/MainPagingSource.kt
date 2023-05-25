@@ -3,7 +3,7 @@ package com.mub.almostaferandroidtask.helpers
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.mub.almostaferandroidtask.features.home.datasource.MovieLocalSource
-import com.mub.almostaferandroidtask.features.home.models.Movie
+import com.mub.almostaferandroidtask.model.comman.Movie
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 

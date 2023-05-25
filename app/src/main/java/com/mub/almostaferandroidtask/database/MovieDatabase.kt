@@ -5,7 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.mub.almostaferandroidtask.features.home.datasource.MovieLocalSource
-import com.mub.almostaferandroidtask.features.home.models.Movie
+import com.mub.almostaferandroidtask.model.comman.Movie
 
 @Database(entities = [Movie::class], version = 1, exportSchema = false)
 abstract class MovieDatabase : RoomDatabase() {
